@@ -1,0 +1,44 @@
+#
+# system.prop for msm8909
+#
+
+#rild.libpath=/system/lib/libreference-ril.so
+rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
+rild.libargs=-d /dev/smd0
+persist.rild.nitz_plmn=
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
+ril.subscription.types=NV,RUIM
+DEVICE_PROVISIONED=1
+# Start in cdma mode
+ro.telephony.default_network=9
+
+debug.sf.hw=1
+debug.egl.hw=1
+debug.composition.type=dyn
+debug.hwc.dynThreshold=2.5
+debug.mdpcomp.logs=0
+dalvik.vm.heapsize=36m
+dalvik.vm.zygotemaxfailedboots=5
+dev.pm.dyn_samplingrate=1
+persist.demo.hdmirotationlock=false
+
+#enable dirty rect
+debug.sf.swaprect=1
+#enable app buffer composition
+debug.sf.hwc.canUseABC=1
+
+#enable gpu perf hint
+sys.hwc.gpu_perf_mode=1
+#ro.hdmi.enable=true
+#tunnel.decode=true
+#tunnel.audiovideo.decode=true
+#lpa.decode=false
+#lpa.use-stagefright=true
+#persist.speaker.prot.enable=false

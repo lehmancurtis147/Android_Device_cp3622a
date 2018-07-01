@@ -1,0 +1,26 @@
+#device         mount point      fstype        [device2] [length=]
+/system	       	ext4		/dev/block/bootdevice/by-name/system		  flags=ro,barrier=1							wait
+/cache		      ext4		/dev/block/bootdevice/by-name/cache	    	flags=noatime,nosuid,nodev,barrier=1,data=ordered			wait,check
+/data		        ext4		/dev/block/bootdevice/by-name/data		    flags=noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc	wait,check,length=-16384
+/sdcard		      vfat		/dev/block/mmcblk1p1				              flags=nosuid,nodev,barrier=1,data=ordered,nodelalloc			wait	
+/config		      emmc		/dev/block/bootdevice/by-name/config		  flags=display="config";backup=1
+/fsc		        emmc		/dev/block/bootdevice/by-name/fsc	      	flags=display="fsc";backup=1
+/fsg	          emmc		/dev/block/bootdevice/by-name/fsg		      flags=display="fsg";backup=1
+/keystore	      emmc		/dev/block/bootdevice/by-name/keystore    flags=display="keystore";backup=1
+/misc		        emmc		/dev/block/bootdevice/by-name/misc	    	flags=display="misc";backup=0
+/modem		      vfat		/dev/block/bootdevice/by-name/modem		    flags=display="Modem";backup=1
+/modemst1	      emmc		/dev/block/bootdevice/by-name/modemst1		flags=display="modemst1";backup=1
+/modemst2	      emmc		/dev/block/bootdevice/by-name/modemst2		flags=display="modemst2";backup=1
+/oem		        ext4		/dev/block/bootdevice/by-name/oem         flags=display="oem";backup=1
+/pad		        emmc		/dev/block/bootdevice/by-name/pad		      flags=display="pad";backup=0
+/rpm		        emmc		/dev/block/bootdevice/by-name/rpm		      flags=display="rpm";backup=1
+/rpmbak		      emmc		/dev/block/bootdevice/by-name/rpmbak		  flags=display="rpmbak";backup=1
+/sbl1		        emmc		/dev/block/bootdevice/by-name/sbl1		    flags=display="sbl1";backup=1
+/sbl1bak	      emmc		/dev/block/bootdevice/by-name/sbl1bak		  flags=display="sbl1bak";backup=1
+/sec		        emmc		/dev/block/bootdevice/by-name/sec		      flags=display="sec";backup=1
+/ssd		        emmc		/dev/block/bootdevice/by-name/ssd		      flags=display="ssd";backup=1
+/tz		          emmc		/dev/block/bootdevice/by-name/tz		      flags=display="tz";backup=1
+/tzbak		      emmc		/dev/block/bootdevice/by-name/tzbak		    flags=display="tzbak";backup=1
+/boot		        emmc		/dev/block/bootdevice/by-name/boot    		flags=display="Boot";backup=1
+/recovery	      emmc		/dev/block/bootdevice/by-name/recovery		flags=display="Recovery";backup=1
+/usbotg		      auto    /dev/block/sda1		      /dev/block/sda		flags=display="Usb-Otg";storage;removable;backup=0

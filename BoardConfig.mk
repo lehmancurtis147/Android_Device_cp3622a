@@ -31,17 +31,17 @@ BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := device/coolpad/cp3622a/bootimg.mk
 TARGET_RECOVERY_FSTAB := device/coolpad/cp3622a/recovery/recovery.fstab
 
-#RECOVERY_VARIANT := twrp
+RECOVERY_VARIANT := twrp
 
 # TWRP
-#TW_NO_EXFAT := true
-#TW_HAVE_SELINUX := true
-#TW_THEME := portrait_hdpi
-#TW_NO_EXFAT_FUSE := true
-#TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
-#TW_EXCLUDE_SUPERSU := true
-#TW_ALWAYS_RMRF := true
-#TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
-#DEVICE_RESOLUTION := 480x854
-#TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
-#TW_MAX_BRIGHTNESS := 255
+TW_NO_EXFAT := true
+TWHAVE_SELINUX := true
+TW_THEME := portrait_hdpi
+TW_NO_EXFAT_FUSE := true
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
+TW_EXCLUDE_SUPERSU := true
+TW_ALWAYS_RMRF := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
+DEVICE_RESOLUTION := 480x854
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_MAX_BRIGHTNESS := 255

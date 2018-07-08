@@ -7,42 +7,16 @@ $(call inherit-product-if-exists, vendor/coolpad/cp3622a/cp3622a-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/coolpad/cp3622a/overlay
 
+
 LOCAL_PATH := device/coolpad/cp3622a/prebuilt
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := $(LOCAL_PATH)device/coolpad/cp3622a/kernel
+	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
-PRODUCT_PACKAGES += PinyinIME
-
 PRODUCT_COPY_FILES += \
-    device/coolpad/cp3622a/init.rc:root/init.rc \
-    device/coolpad/cp3622a/init.qcom.sh:root/init.qcom.sh \
-    device/coolpad/cp3622a/init.qcom.rc:root/init.qcom.rc \
-    device/coolpad/cp3622a/ueventd.rc:root/ueventd.rc \
-    device/coolpad/cp3622a/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
-    device/coolpad/cp3622a/init.qcom.coex.sh:system/etc/init.qcom.coex.sh \
-    device/coolpad/cp3622a/init.qcom.coex.sh:system/etc/init.qcom.post_boot.sh \
-    device/coolpad/cp3622a/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh \
-    device/coolpad/cp3622a/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    device/coolpad/cp3622a/vold.fstab:system/etc/vold.fstab \
     $(LOCAL_KERNEL):kernel
-
-OVERRIDE_PATH := device/coolpad/cp3622a/proprietary/override
-PRODUCT_COPY_FILES += \
-    $(OVERRIDE_PATH)/lib/liba2dp.so:obj/lib/liba2dp.so \
-    $(OVERRIDE_PATH)/lib/libaudio.so:obj/lib/libaudio.so \
-    $(OVERRIDE_PATH)/lib/libaudiopolicy.so:obj/lib/libaudiopolicy.so \
-    $(OVERRIDE_PATH)/lib/libcamera.so:obj/lib/libcamera.so \
-    $(OVERRIDE_PATH)/lib/libcamera_client.so:obj/lib/libcamera_client.so \
-    $(OVERRIDE_PATH)/lib/libhardware_legacy.so:obj/lib/libhardware_legacy.so \
-    $(OVERRIDE_PATH)/lib/libmedia.so:obj/lib/libmedia.so \
-    $(OVERRIDE_PATH)/lib/librpc.so:obj/lib/librpc.so \
-
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/coolpad/cp3622a/proprietary/override,system) \
-    $(call find-copy-subdir-files,*,device/coolpad/cp3622a/proprietary/system,system)
 
 $(call inherit-product, build/target/product/full.mk)
 

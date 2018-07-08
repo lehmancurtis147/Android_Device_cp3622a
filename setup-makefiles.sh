@@ -18,8 +18,8 @@
 
 set -e
 
-DEVICE=cp3662a
-VENDOR=coolpad
+export DEVICE=cp3622a
+export VENDOR=coolpad
 
 INITIAL_COPYRIGHT_YEAR=2016
 

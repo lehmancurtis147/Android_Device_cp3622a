@@ -21,8 +21,8 @@ endif
 
 $(call inherit-product, device/qcom/common/common.mk)
 
-PRODUCT_NAME := msm8909
-PRODUCT_DEVICE := msm8909
+PRODUCT_NAME := cp3622a
+PRODUCT_DEVICE := cp3622a
 
 ifeq ($(strip $(TARGET_USES_QTIC)),true)
 # font rendering engine feature switch

@@ -18,6 +18,6 @@ $(call inherit-product, device/coolpad/cp3622a/device.mk)
 
 PRODUCT_NAME := full_cp3622a
 PRODUCT_DEVICE := cp3622a
-PRODUCT_BRAND := Android
+PRODUCT_BRAND := Coolpad
 PRODUCT_MODEL := cp3622a
 PRODUCT_MANUFACTURER := coolpad

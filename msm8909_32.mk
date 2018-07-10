@@ -47,7 +47,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/libacdbmapper.so:system/vendor/lib/libacdbmapper.so \
     $(LOCAL_PATH)/audio/libacdbrtac.so:system/vendor/lib/libacdbrtac.so
 
-# Huawei sensors fix
+# coolpad sensors fix
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/sensors.msm8909.so:system/lib/hw/sensors.msm8909.so
 
@@ -59,7 +59,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 $(LOCAL_PATH)/twrp/twrp.fstab:recovery/root/etc/twrp.fstab
 
-# Huawei sim files
+# coolpad sim files
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/operator/libqmi_nv_api.so:system/lib/libqmi_nv_api.so \
     $(LOCAL_PATH)/operator/libqmi_oem_api.so:system/lib/libqmi_oem_api.so
@@ -300,4 +300,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 include $(LOCAL_PATH)/audio_headers.mk
 
 # Inherit proprietary blobs
-$(call inherit-product-if-exists, vendor/huawei/y6/y6-vendor.mk)
+$(call inherit-product-if-exists, vendor/coolpad/cp3622a/cp3622a-vendor.mk)

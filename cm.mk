@@ -14,8 +14,8 @@ $(call inherit-product, vendor/cm/config/telephony# Copyright (C) 2015 The Cyano
 # limitations under the License.
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 854
+TARGET_SCREEN_WIDTH := 480
 
 # Inherit from these products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -28,9 +28,7 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 PRODUCT_NAME := cm_cp3622a
 PRODUCT_DEVICE := cp3622a
-PRODUCT_MANUFACTURER := COOLPAD
 PRODUCT_BRAND := Coolpad
 PRODUCT_MODEL := cp3622a
 PRODUCT_CHARACTERISTICS := phone
 
-PRODUCT_GMS_CLIENTID_BASE := android-coolpad.mk)

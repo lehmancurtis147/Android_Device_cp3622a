@@ -10,7 +10,7 @@ DEVICE_PACKAGE_OVERLAYS += device/coolpad/cp3622a/overlay
 
 LOCAL_PATH := device/coolpad/cp3622a/prebuilt
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
+	LOCAL_KERNEL := $(LOCAL_PATH)device/coolpad/cp3622a/prebuilt/kernel
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
